@@ -1,0 +1,88 @@
+@define-color bg-default rgb(22, 22, 22);
+@define-color bg-hover rgb(72, 72, 72);
+@define-color bg-focus rgb(3, 3, 3);
+@define-color bg-active rgb(1, 1, 1);
+@define-color bg-warning rgb(215, 166, 19);
+@define-color bg-urgent rgb(230, 44, 44);
+
+@define-color text-color rgb(238, 238, 238); 
+
+* {
+    font-family: 'Inconsolata LGC Nerd Font';
+    color: @text-color;
+    transition: 0.1s;
+    font-size: 16px;
+}
+
+window#waybar {
+    background: rgba(22, 22, 22, 0.7);
+    border-radius: 0;
+}
+
+#workspaces,
+#custom-apps,
+#tray,
+#wireplumber,
+#battery,
+#clock,
+#language,
+#custom-power {
+    padding: 0 1em;
+}
+
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0 1em 0 0.85em;
+}
+
+#workspaces button.active {
+    background: @bg-active;
+}
+
+#workspaces button:hover,
+#custom-apps:hover,
+#wireplumber:hover,
+#battery:hover,
+#clock:hover,
+#custom-power:hover {
+    background: @bg-hover;
+}
+
+#workspaces button:focus,
+#custom-apps:focus,
+#wireplumber:focus,
+#battery:focus,
+#clock:focus,
+#custom-power:focus{
+    background: @bg-focus;
+}
+
+
+#workspaces button.urgent {
+    background: @bg-urgent;
+}
+
+#wireplumber,
+#battery {
+    min-width: 60px;
+    padding: 0 1.2em 0 0.8em;
+}
+
+#clock {
+    min-width: 110px;
+}
+
+#language {
+    min-width: 120px;
+}
+
+#custom-power {
+    padding: 0 1.1em 0 0.9em;
+   
+}

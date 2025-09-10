@@ -1,0 +1,40 @@
+(defwidget menu []
+  (box :class "menu" :orientation "h" :spacing 10 :space-evenly false :halign "center" :valign "center"
+  (button :width 300 :height 500 :onclick lockcommand lockicon)
+  (button :width 300 :height 500 :onclick exitcommand exiticon)
+  (button :width 300 :height 500 :onclick suspendcommand suspendicon)
+  (button :width 300 :height 500 :onclick rebootcommand rebooticon)
+  (button :width 300 :height 500 :onclick powercommand powericon)
+  (button :width 300 :height 500 :onclick backcommand backicon)))
+
+(defvar lockcommand "./scripts/hyprlockfix.sh")
+(defvar lockicon "")
+
+(defvar exitcommand "uwsm stop")
+(defvar exiticon "󰈆")
+
+(defvar suspendcommand "eww close powermenu && systemctl suspend")
+(defvar suspendicon "󰏤")
+
+(defvar rebootcommand "reboot")
+(defvar rebooticon "󰜉")
+
+(defvar powercommand "systemctl poweroff")
+(defvar powericon "󰐥")
+
+(defvar backcommand "eww close powermenu")
+(defvar backicon "󰌑")
+
+(defwindow powermenu
+  :monitor 0
+  :stacking "overlay"
+  :exclusive false
+  :focusable "none"
+  :namespace "powermenu"
+  :geometry (geometry :x "0"
+                      :y "0"
+                      :width "100%"
+                      :height "100%"
+                      :anchor "center")
+  (menu))
+

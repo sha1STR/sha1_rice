@@ -1,0 +1,1 @@
+sudo pacman -S hyprland nwg-look nwg-dock-hyprland waybar wofi kitty nvim mpvpaper fastfetch eww refind firefox

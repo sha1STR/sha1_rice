@@ -1,0 +1,48 @@
+(defwidget connectionbox []
+  (box :class "connectionbox" :orientation "h" :spacing 10 :space-evenly true
+  (wifibutton)))
+
+(defwidget wifibutton []
+  (box
+  :orientation "h"
+  :class "wifibutton"
+  (button
+    :class "wifibutton"
+    :width "10px"
+    :height "10px"
+    :onclick "./scripts/wifibutton.sh"
+    connection)
+  (wifilist)))
+
+(defwidget wifilist []
+  (revealer :transition "slidedown" :reveal true :duration "100ms"
+    (scroll :vscroll true :hscroll false
+      (combo-box-text :items '["1", "2", "3", "4"]' :onchange ""))))
+
+(defwidget wallpapercontrol []
+  (box :class "wallpapercontolbox" :orientation "h" :spacing 10 :space-evenly true
+  (button :class "wallpapertoggle" :width "10px" :height "10px" :onclick "./scripts/wallpapertoggle.sh" "Toggle wallpaper")))
+
+(defpoll connection
+  :interval "1s"
+  :initial "Connection"
+  "nmcli -g general.connection device show wlp2s0")
+
+
+(defwindow controlpanel
+  :monitor 0
+  :geometry (geometry :anchor "top right"
+                      :x "8px"
+                      :y "48px"
+                      :width "30%"
+                      :height "30%")
+  :stacking "fg"
+
+  (box
+    :class "maincontainer"
+    :orientation "v"
+    :space-evenly true
+
+    (connectionbox)
+    (wallpapercontrol)
+    (button :onclick "eww close controlpanel" "close")))

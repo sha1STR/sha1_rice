@@ -1,0 +1,35 @@
+$bg-default: rgb(22, 22, 22);
+$bg-hover: rgb(72, 72, 72);
+$bg-focus: rgb(3, 3, 3);
+$bg-active: rgb(1, 1, 1);
+$bg-warning: rgb(215, 166, 19);
+$bg-urgent: rgb(230, 44, 44);
+$text-color: rgb(238, 238, 238); 
+$text-selected: rgb(206, 206, 205);
+
+* {
+    transition: 0.1s;
+}
+
+window {
+    background: $bg-default;
+
+}
+
+.menu {
+    background: $bg-default;
+    outline: none;
+    border: none;
+}
+
+.menu button {
+    color: $text-color;
+    font-size: 300%;
+    outline: 2px white;
+    background: $bg-default;
+    border-radius: 10%;
+}
+
+.menu button:hover {
+    background: $bg-hover;
+}

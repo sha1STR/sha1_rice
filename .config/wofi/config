@@ -1,0 +1,12 @@
+style=/home/sha1/.config/wofi/style.css
+show=drun
+width=70%
+height=60%
+prompt=Search
+allow_images=true
+insensitive=true
+columns=1
+no_actions=true
+image_size=48
+dynamic_lines=true
+line_wrap=word

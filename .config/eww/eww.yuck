@@ -1,0 +1,2 @@
+(include "/home/sha1/.config/eww/controlpanel.yuck")
+(include "/home/sha1/.config/eww/powermenu.yuck")

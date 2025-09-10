@@ -1,0 +1,67 @@
+@define-color bg-default rgb(22, 22, 22);
+@define-color bg-hover rgb(72, 72, 72);
+@define-color bg-focus rgb(3, 3, 3);
+@define-color bg-active rgb(1, 1, 1);
+@define-color bg-warning rgb(215, 166, 19);
+@define-color bg-urgent rgb(230, 44, 44);
+
+@define-color text-color rgb(238, 238, 238); 
+@define-color text-selected rgb(206, 206, 205);
+
+* {
+    transition-duration: 0.1s;
+}
+
+#window {
+    background-color: transparent;
+}
+
+#outer-box {
+    background-color: rgba(22, 22, 22, 0.7);
+}
+
+#input {
+    background-color: transparent;
+    border: none;
+    min-height: 45px;
+}
+
+#input:focus{
+    box-shadow: none;
+}
+
+#scroll {
+
+}
+
+#inner-box {
+    padding: 0;
+    margin: 0;
+}
+
+#img {
+    padding: 0 0.5em 0 1em;
+}
+
+#text {
+    
+}
+.entry {
+    
+}
+
+#unselected {
+
+}
+
+#selected {
+    background-color: var(bg-hover);
+}
+
+#entry {
+    outline: none;
+}
+
+#expander-box {
+
+}
